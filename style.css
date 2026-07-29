@@ -142,3 +142,36 @@ font-size:34px;
 }
 
 }
+.icon{
+font-size:60px;
+text-align:center;
+margin-bottom:15px;
+}
+
+.tag{
+background:#ff3b30;
+display:inline-block;
+padding:5px 12px;
+border-radius:20px;
+font-size:13px;
+font-weight:bold;
+margin-bottom:15px;
+}
+
+.stars{
+color:gold;
+font-size:22px;
+text-align:center;
+margin-bottom:15px;
+}
+
+.card{
+position:relative;
+overflow:hidden;
+}
+
+.card .tag{
+position:absolute;
+top:15px;
+right:15px;
+}
