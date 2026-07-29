@@ -42,14 +42,14 @@ gap:20px;
 padding:20px;
 }
 
-.card{
+.card{border:1px solid #334155;
 background:#1e293b;
 padding:20px;
 border-radius:15px;
 transition:.3s;
 }
 
-.card:hover{
+.card:hover{box-shadow:0 0 20px #2563eb55;
 transform:translateY(-5px);
 }
 
