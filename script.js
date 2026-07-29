@@ -29,3 +29,27 @@ if (appList && typeof apps !== "undefined") {
   });
 
 }
+// Tìm kiếm ứng dụng
+const search = document.getElementById("search");
+
+if (search) {
+  search.addEventListener("input", function () {
+    const keyword = this.value.toLowerCase();
+
+    document.querySelectorAll(".card").forEach(card => {
+      const name = card.querySelector("h3").textContent.toLowerCase();
+
+      if (name.includes(keyword)) {
+        card.style.display = "";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+}
+
+// Đếm lượt truy cập
+let views = Number(localStorage.getItem("views") || 0);
+views++;
+localStorage.setItem("views", views);
+console.log("Lượt truy cập:", views);
