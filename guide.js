@@ -1,23 +1,23 @@
 const list = document.getElementById("guide-list");
 const viewer = document.getElementById("guide-view");
 
-function showList() {
+function renderList() {
 
     viewer.style.display = "none";
     list.style.display = "block";
 
-    list.innerHTML = "";
+    let html = "";
 
     guides.forEach((guide, index) => {
 
-        list.innerHTML += `
+        html += `
         <div class="card">
 
             <h2>📄 ${guide.title}</h2>
 
             <p>${guide.description}</p>
 
-            <button onclick="showGuide(${index})">
+            <button onclick="openGuide(${index})">
                 Đọc bài
             </button>
 
@@ -26,33 +26,30 @@ function showList() {
 
     });
 
+    list.innerHTML = html;
+
 }
-function showGuide(index) {
+
+function openGuide(index) {
 
     list.style.display = "none";
     viewer.style.display = "block";
 
     viewer.innerHTML = `
-        <button onclick="showList()">
-            ← Quay lại danh sách
-        </button>
-
-        <br><br>
+        <div class="back">
+            <button onclick="renderList()">
+                ← Quay lại
+            </button>
+        </div>
 
         ${guides[index].content}
-
-        <br><br>
-
-        <button onclick="showList()">
-            ← Quay lại danh sách
-        </button>
     `;
 
     window.scrollTo({
-        top: 0,
-        behavior: "smooth"
+        top:0,
+        behavior:"smooth"
     });
 
 }
 
-showList();
+renderList();
