@@ -22,11 +22,31 @@ if (list && viewer) {
 
 function openGuide(index) {
 
-  viewer.innerHTML = guides[index].content;
+  list.style.display = "none";
+
+  viewer.style.display = "block";
+
+  viewer.innerHTML = `
+    <button onclick="backToList()">
+      ← Quay lại
+    </button>
+
+    <br><br>
+
+    ${guides[index].content}
+  `;
 
   window.scrollTo({
     top: 0,
     behavior: "smooth"
   });
+
+}
+
+function backToList() {
+
+  viewer.style.display = "none";
+
+  list.style.display = "block";
 
 }
