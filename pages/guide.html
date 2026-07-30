@@ -3,14 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Hướng dẫn</title>
 
 <style>
+
 body{
     margin:0;
-    font-family:Arial,sans-serif;
     background:#111;
     color:white;
+    font-family:Arial,sans-serif;
 }
 
 .container{
@@ -26,19 +28,39 @@ body{
     margin-bottom:20px;
 }
 
-a{
-    color:#4da3ff;
-    text-decoration:none;
-}
-
-.button{
-    display:inline-block;
-    margin-top:20px;
+.card button{
+    margin-top:15px;
     padding:10px 20px;
+    border:none;
+    border-radius:10px;
     background:#4da3ff;
     color:white;
+    cursor:pointer;
+}
+
+.back{
+    margin-bottom:20px;
+}
+
+.back button{
+    padding:10px 20px;
+    border:none;
+    border-radius:10px;
+    background:#4da3ff;
+    color:white;
+    cursor:pointer;
+}
+
+.home{
+    display:inline-block;
+    margin-top:30px;
+    padding:12px 22px;
+    background:#4da3ff;
+    color:white;
+    text-decoration:none;
     border-radius:10px;
 }
+
 </style>
 
 </head>
@@ -48,16 +70,15 @@ a{
 <div class="container">
 
 <h1>📚 Hướng dẫn</h1>
-<div id="guide-list" style="display:block;"></div>
 
-<hr>
+<div id="guide-list"></div>
 
 <div id="guide-view" style="display:none;"></div>
 
-
-<a class="button" href="../index.html">⬅ Quay về trang chủ</a>
+<a class="home" href="../index.html">← Quay về trang chủ</a>
 
 </div>
+
 <script src="../guides.js"></script>
 <script src="../guide.js"></script>
 
